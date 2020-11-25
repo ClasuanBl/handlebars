@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap%27');
+
+
 $texto-blanco: white; 
 $fondo-gris: #EEEEEE;
 $color-boton:linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(247,107,28,1) 100%);
@@ -7,35 +10,64 @@ $boton-gris-oscuro:#9B9B9B;
 body{
    display: grid;
    grid-template-rows: 1fr 1fr 1fr 1fr;
+   font-family: 'Open Sans', sans-serif;;
 }
 
 header{
     background-image: url("../img/Background_image_edited.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     color:$texto-blanco;
-    margin: 100px;
-    padding: 100px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+
+    figure{
+        height: 10%;
+        padding: 50px 0 0 80px;
+        
+        img{
+            width: 10em;
+        }  
+
+    }
+    nav {
+        height: 10%;
+        padding: 50px 80px 0 0;
+        
+        ul{
+            display:flex;
+            
+            li{
+                padding:0 20px;
+            }
+        }
+    }
+    section{
+        width:100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 50px 0 0 80px;
+        
+        h1{
+            font-size: 45px;
+            font-weight: 500;
+        }
+
+        h2{
+            font-size: 40px;
+            font-weight: 500;
+        }
+    }
 }
 
-.nav {
-   padding: 50px;
-   margin:  50px;
-   display: flex;
-   flex: right;;
+main{
+    
 }
 
-.section {
-
-}
-
-.div {
 
 
-}
 
-.footer {
+footer {
 background-color: $fondo-gris;
 
 }
