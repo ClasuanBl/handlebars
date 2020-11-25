@@ -1,0 +1,43 @@
+$texto-blanco: white; 
+$fondo-gris: #EEEEEE;
+$color-boton:linear-gradient(90deg, rgba(250,217,97,1) 0%, rgba(247,107,28,1) 100%);
+$boton-gris:#D8D8D8;
+$boton-gris-oscuro:#9B9B9B;
+
+body{
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+header{
+    background-image: url("../img/Background_image_edited.png");
+    color:$texto-blanco;
+    margin: 100px;
+    padding: 100px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.nav {
+   padding: 50px;
+   margin:  50px;
+   display: flex;
+   flex: right;;
+}
+
+.section {
+
+}
+
+.div {
+
+
+}
+
+.footer {
+background-color: $fondo-gris;
+
+}
+
+

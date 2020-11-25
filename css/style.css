@@ -1,1 +1,35 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+header {
+  background-image: url("../img/Background_image_edited.png");
+  color: white;
+  margin: 100px;
+  padding: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.nav {
+  padding: 50px;
+  margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: right;
+      -ms-flex: right;
+          flex: right;
+}
+
+.footer {
+  background-color: #EEEEEE;
+}
+/*# sourceMappingURL=style.css.map */
