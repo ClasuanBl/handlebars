@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap%27");
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 body {
   display: -ms-grid;
   display: grid;
@@ -63,7 +89,7 @@ header section h2 {
   font-weight: 500;
 }
 
-a {
+main .banner a, .carrusel a {
   text-decoration: none;
   color: inherit;
   background: -webkit-gradient(linear, left top, right top, from(#f76b1c), to(#fad961));
@@ -72,6 +98,9 @@ a {
   border-radius: 50px;
   color: white;
   font-size: 17px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 main .banner {
@@ -154,6 +183,12 @@ main .banner p {
 }
 
 .carrusel .tarjeta {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
   border-radius: 25px;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
@@ -226,10 +261,7 @@ main .banner p {
   margin: 30px 5px 60px 5px;
 }
 
-.carrusel .botoncontacto {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.carrusel a {
   margin-bottom: 60px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
