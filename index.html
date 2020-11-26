@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
 </head>
 <body>
     <header>
@@ -86,8 +88,18 @@
 
     </main>
     <footer>
-        <p>@2018 Smart SEO, All rights reserved.</p>
+       
     </footer>
-    
+    <script id="copyright-template" type="text/x-handlebars-template">
+        <p>©{{year}} {{company}}, All rights reserved.</p>
+      </script>  
+      <script>
+      var source = document.getElementById("copyright-template").innerHTML;
+        var template = Handlebars.compile(source);
+        var context = {year:new Date().getFullYear(), company: "Smart SEO"};
+        var myfooter = template(context);
+        document.querySelector("footer").innerHTML=myfooter;
+      </script>
 </body>
+
 </html>
