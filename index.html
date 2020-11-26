@@ -24,8 +24,8 @@
             </ul>
         </nav>
         <section>
-            <h1>THE BEST SEO AGENCY EVER</h1>
-            <h2>Your business is always safe in our hands</h2>
+           
+          
         </section>
     </header>
     <main>
@@ -100,6 +100,18 @@
         var myfooter = template(context);
         document.querySelector("footer").innerHTML=myfooter;
       </script>
+<script id="header-template" type="text/x-handlebars-template">
+    <h1>THE BEST SEO AGENCY EVER</h1>
+    <h2>{{eslogandeldia}}</h2>
+      </script>  
+      <script>
+          var source=document.getElementById("header-template").innerHTML;
+          var template=Handlebars.compile(source);
+          var context={eslogandeldia:"La mejor puta empresa del mundo mundial"};
+          document.querySelector("header section").innerHTML=template(context);
+      </script>
+
+
 </body>
 
 </html>
