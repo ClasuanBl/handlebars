@@ -107,7 +107,10 @@
       <script>
           var source=document.getElementById("header-template").innerHTML;
           var template=Handlebars.compile(source);
-          var context={eslogandeldia:"La mejor puta empresa del mundo mundial"};
+          var slogans=["La mejor puta empresa del mundo mundial","Hoy será un gran día para el mundo","La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica"];
+          
+          var context={eslogandeldia:slogans[Math.floor(Math.random()*3)]};
+        
           document.querySelector("header section").innerHTML=template(context);
       </script>
 
